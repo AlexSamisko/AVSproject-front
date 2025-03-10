@@ -1,77 +1,130 @@
-# AVS Project Frontend
+# AVS Project
 
-A web dashboard for tracking tasks, recording completed work, receiving information, and exchanging comments on the received data.
+AVS Project is a web-based dashboard application designed to help users track tasks, maintain a record of completed tasks, access information, and exchange comments on shared data.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+  - [Backend Setup](#backend-setup)
+  - [Frontend Setup](#frontend-setup)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
-- Task tracking and management
-- Comment system for discussions
-- Real-time updates via WebSocket
+
+- Task management: Create, update, and delete tasks.
+- Activity log: Keep track of completed tasks.
+- Information sharing: Access and share relevant information.
+- Commenting system: Exchange comments on shared data.
+
+## Technologies Used
+
+- **Frontend**: React, JavaScript, HTML, CSS
+- **Backend**: Node.js, Express
+- **Database**: SQLite (data.db)
+- **Deployment**:
+  - Backend: Render
+  - Frontend: GitHub Pages
 
 ## Installation
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/AlexSamisko/AVSproject-frontend.git
-cd AVSproject-frontend
-```
+### Backend Setup
 
-2. **Install dependencies**
-```bash
-npm install
-```
+1. **Clone the repository**:
 
-3. **Create `.env` file**
-```
-REACT_APP_BACKEND_URL=https://avsproject-back.onrender.com
-```
+   ```bash
+   git clone https://github.com/AlexSamisko/AVSproject-back.git
+   cd AVSproject-back
+   ```
 
-4. **Run the application**
-```bash
-npm start
-```
+2. **Install dependencies**:
 
-## Deployment
+   ```bash
+   npm install
+   ```
 
-To deploy on **GitHub Pages**:
+3. **Set up the database**:
 
-1. Add the following to your `package.json`:
-```json
-"homepage": "https://yourusername.github.io/AVSproject-frontend"
-```
+   - Ensure the `data.db` file is located in the root directory of the backend project.
 
-2. Run the following commands:
-```bash
-npm run build
-npm run deploy
-```
+4. **Configure environment variables**:
 
-## API Endpoints
+   - Create a `.env` file in the root directory and add the following:
 
-| Endpoint                     | Method | Description                  |
-|-----------------------------|---------|------------------------------|
-| `/restoreandlogin`           | `POST`  | Restores session and logs in |
-| `/tasks`                     | `GET`   | Fetches all tasks            |
-| `/tasks/:id`                 | `PUT`   | Updates a specific task       |
+     ```env
+     DATABASE_URL=./data.db
+     ```
 
-## Project Structure
-```
-/src
- ├── components
- ├── pages
- ├── services
- ├── utils
- └── App.js
-```
+5. **Start the server**:
 
-## Technologies
-- React.js
-- WebSocket
-- Fetch API
-- GitHub Pages (for deployment)
+   ```bash
+   npm start
+   ```
 
-## Contributors
-- [Alex Samisko](https://github.com/AlexSamisko)
+   The backend server should now be running on `http://localhost:5000`.
+
+### Frontend Setup
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/AlexSamisko/AVSproject-front.git
+   cd AVSproject-front
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Update API endpoints**:
+
+   - In your frontend code, ensure that all API requests point to the correct backend URL. For local development, this would be `http://localhost:5000`. For production, use the deployed backend URL.
+
+4. **Start the development server**:
+
+   ```bash
+   npm start
+   ```
+
+   The frontend application should now be running on `http://localhost:3000`.
+
+## Usage
+
+- Access the frontend application through your browser.
+- Use the dashboard to manage tasks, view completed tasks, access shared information, and participate in discussions through comments.
+
+## Contributing
+
+We welcome contributions to enhance the AVS Project. To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+
+   ```bash
+   git checkout -b feature-name
+   ```
+
+3. Make your changes.
+4. Commit your changes:
+
+   ```bash
+   git commit -m 'Add feature'
+   ```
+
+5. Push to the branch:
+
+   ```bash
+   git push origin feature-name
+   ```
+
+6. Submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
