@@ -1,38 +1,85 @@
 .App {
   text-align: center;
+  width: 100%;
+  background-color: #b1cdcf;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
+  z-index: 1;
+  color: #d1d5db;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  align-items: flex-start;
+  width: 98%; /* 1% отступ слева и справа */
+  margin: 2% auto 0;
+  padding: 1%;
+  background: linear-gradient(
+    135deg,
+    #536f9f,
+    #3d4041
+  ); /* Светло-голубой градиент */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(10px); */
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  width: 57%;
+  padding: 20px;
+  background: rgba(73, 86, 135, 0.926);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  /* backdrop-filter: blur(10px); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aside {
+  width: 40%;
+  margin-left: 1%;
+  padding: 20px;
+  background: rgba(73, 86, 135, 0.926);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  /* backdrop-filter: blur(10px); */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  min-width: 80%;
+}
+
+footer {
+  z-index: 1;
+  color: #d1d5db;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 97%; /* 1% отступ слева и справа */
+  margin: 2% auto 0;
+  padding: 1.5%;
+  background: linear-gradient(135deg, #3d4041, #536f9f); /* Обратный градиент */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer > * {
+  flex: 1;
+  height: 5rem;
+  padding: 20px;
+  background: rgba(73, 86, 135, 0.926);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer > *:not(:last-child) {
+  margin-right: 1%;
+}
+
+.contacts a {
+  margin-left: 5px;
+  color: azure;
 }

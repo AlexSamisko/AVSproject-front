@@ -1,0 +1,33 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}

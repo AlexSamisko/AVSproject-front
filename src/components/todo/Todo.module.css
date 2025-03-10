@@ -1,0 +1,59 @@
+.todo {
+  background: rgba(70, 85, 135, 0.9);
+  color: #f0f0f0;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.isComplete {
+  text-decoration: line-through;
+  color: #a3d9a5;
+  font-weight: bold;
+  width: 70%;
+}
+
+.isNotComplete {
+  width: 70%;
+}
+
+.btnMarkAsComplete {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btnMarkAsComplete:hover {
+  background: #388e3c;
+}
+
+.btnDelete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.btnDelete:hover {
+  background: #c0392b;
+}

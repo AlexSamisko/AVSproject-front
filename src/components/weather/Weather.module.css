@@ -1,0 +1,23 @@
+.weather {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f0f0f0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.weather p {
+  margin: 10px 0;
+}
+
+.weather p:first-child {
+  font-weight: bold;
+}
+
+.weather p:last-child {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+}
