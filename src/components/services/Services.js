@@ -10,9 +10,10 @@ function Services() {
   };
 
   return (
-    <div className={`${isActive ? styles.hidden : ''}`}>
+    <div className={`${styles.container} ${isActive ? styles.hidden : ''}`}>
       {!isActive ? (
         <button
+          className={styles.btn}
           onClick={() => {
             setisActive(!isActive);
           }}

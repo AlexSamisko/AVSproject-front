@@ -6,18 +6,127 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   font-size: 18px;
-  max-width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .weather p {
   margin: 10px 0;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .weather p:first-child {
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .weather p:last-child {
   font-style: italic;
   color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 320px) {
+  .weather {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .weather p {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .weather {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .weather {
+    padding: 18px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .weather {
+    padding: 20px;
+    max-width: 500px;
+    font-size: 20px;
+  }
+
+  .weather p {
+    margin: 12px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .weather {
+    padding: 25px;
+    max-width: 600px;
+    font-size: 22px;
+  }
+
+  .weather p {
+    margin: 15px 0;
+  }
+}
+
+@media print {
+  .weather {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+  }
+
+  .weather p:last-child {
+    color: #666 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .weather {
+    background: linear-gradient(135deg, #162b57, #1e3c72);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .weather {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (prefers-contrast: high) {
+  .weather {
+    background: #1a365d;
+    border: 2px solid white;
+  }
+
+  .weather p:last-child {
+    color: white;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .weather {
+    padding: 12px 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .weather p {
+    margin: 5px 10px;
+    width: auto;
+  }
 }

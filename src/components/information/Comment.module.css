@@ -6,12 +6,15 @@
   margin-bottom: 12px;
   list-style: none;
   color: #f0f0f0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .commentWrapper {
   display: flex;
   flex-direction: column;
   width: 80%;
+  box-sizing: border-box;
 }
 
 .buttonWrapper {
@@ -19,23 +22,29 @@
   flex-direction: column;
   justify-content: center;
   width: 20%;
+  box-sizing: border-box;
+  padding-left: 10px;
 }
 
 .comment article {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .comment p {
   font-size: 16px;
   margin: 0;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .comment time {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
   align-self: flex-end;
+  margin-top: 5px;
 }
 
 .comment button {
@@ -47,6 +56,8 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .comment button:last-of-type {
@@ -56,4 +67,69 @@
 
 .comment button:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .comment article {
+    flex-direction: column;
+  }
+
+  .commentWrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .buttonWrapper {
+    width: 100%;
+    padding-left: 0;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .comment button {
+    flex: 1;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .comment button:last-of-type {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .comment {
+    padding: 12px;
+  }
+
+  .comment p {
+    font-size: 14px;
+  }
+
+  .comment time {
+    font-size: 11px;
+  }
+
+  .buttonWrapper {
+    flex-direction: column;
+  }
+
+  .comment button:last-of-type {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .comment {
+    padding: 10px;
+  }
+
+  .comment p {
+    font-size: 13px;
+  }
+
+  .comment button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
 }

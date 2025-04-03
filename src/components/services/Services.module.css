@@ -1,4 +1,160 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(73, 86, 135, 0.926);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: rgba(83, 96, 145, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .hidden {
-  background: none;
-  box-shadow: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: 1200px) {
+  .btn {
+    padding: 18px 25px;
+  }
+
+  .btn h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .btn {
+    padding: 16px 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 14px 20px;
+  }
+
+  .btn h4 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    padding: 12px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+  }
+
+  .btn h4 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+
+  .btn h4 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  .btn h4 {
+    font-size: 14px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .btn {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .container {
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+
+  .btn:active {
+    transform: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .btn {
+    background: rgba(63, 76, 125, 0.95);
+  }
+
+  .btn:hover {
+    background: rgba(73, 86, 135, 0.99);
+  }
 }

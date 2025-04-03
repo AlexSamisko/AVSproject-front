@@ -2,44 +2,41 @@
   text-align: center;
   width: 100%;
   background-color: #b1cdcf;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
+  flex-grow: 1;
   z-index: 1;
   color: #d1d5db;
   display: flex;
-
+  flex-wrap: wrap;
   align-items: flex-start;
-  width: 98%; /* 1% отступ слева и справа */
+  width: 98%;
   margin: 2% auto 0;
   padding: 1%;
-  background: linear-gradient(
-    135deg,
-    #536f9f,
-    #3d4041
-  ); /* Светло-голубой градиент */
+  background: linear-gradient(135deg, #536f9f, #3d4041);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* backdrop-filter: blur(10px); */
 }
 
 .main {
-  width: 57%;
+  width: 100%;
   padding: 20px;
   background: rgba(73, 86, 135, 0.926);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  /* backdrop-filter: blur(10px); */
 }
 
 .aside {
-  width: 40%;
-  margin-left: 1%;
+  width: 100%;
+  margin-top: 2%;
   padding: 20px;
   background: rgba(73, 86, 135, 0.926);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  /* backdrop-filter: blur(10px); */
 }
 
 ul {
@@ -50,36 +47,138 @@ ul {
 
 textarea {
   min-width: 80%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 footer {
   z-index: 1;
   color: #d1d5db;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 97%; /* 1% отступ слева и справа */
+  align-items: stretch;
+  width: 97%;
   margin: 2% auto 0;
   padding: 1.5%;
-  background: linear-gradient(135deg, #3d4041, #536f9f); /* Обратный градиент */
+  background: linear-gradient(135deg, #3d4041, #536f9f);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer > * {
-  flex: 1;
-  height: 5rem;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background: rgba(73, 86, 135, 0.926);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2%;
+  min-height: 5rem;
+  overflow: auto;
 }
 
-footer > *:not(:last-child) {
-  margin-right: 1%;
+footer .services {
+  justify-content: center;
 }
 
 .contacts a {
   margin-left: 5px;
   color: azure;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    width: 95%;
+    padding: 2%;
+    margin: 3% auto 0;
+  }
+
+  .main,
+  .aside {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  textarea {
+    min-width: 90%;
+  }
+
+  footer {
+    width: 95%;
+    padding: 2%;
+  }
+
+  footer > * {
+    padding: 15px;
+    min-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .wrapper,
+  footer {
+    width: 95%;
+  }
+
+  textarea {
+    min-width: 85%;
+  }
+
+  footer > * {
+    margin-bottom: 1.5%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    width: 57%;
+  }
+
+  .aside {
+    width: 40%;
+    margin-left: 1%;
+    margin-top: 0;
+  }
+
+  footer > * {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  footer > *:not(:last-child) {
+    margin-right: 1%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    width: 95%;
+    max-width: 1400px;
+  }
+
+  .main {
+    width: 60%;
+  }
+
+  .aside {
+    width: 37%;
+    margin-left: 2%;
+    margin-top: 0;
+  }
+
+  footer {
+    width: 95%;
+    max-width: 1400px;
+  }
+
+  footer > * {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  footer > *:not(:last-child) {
+    margin-right: 2%;
+  }
 }

@@ -5,28 +5,32 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
   font-size: 18px;
+  word-break: break-word;
 }
 
 .buttonWrapper {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 100%;
+  gap: 10px;
+}
+
+.isComplete,
+.isNotComplete {
+  width: 100%;
+  padding: 5px;
 }
 
 .isComplete {
   text-decoration: line-through;
   color: #a3d9a5;
   font-weight: bold;
-  width: 70%;
-}
-
-.isNotComplete {
-  width: 70%;
 }
 
 .btnMarkAsComplete {
@@ -37,6 +41,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: 500;
 }
 
 .btnMarkAsComplete:hover {
@@ -51,9 +56,135 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin-top: 10px;
+  margin-top: 5px;
+  font-weight: 500;
 }
 
 .btnDelete:hover {
   background: #c0392b;
+}
+
+@media screen and (max-width: 320px) {
+  .todo {
+    padding: 10px;
+    font-size: 16px;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .btnMarkAsComplete,
+  .btnDelete {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .buttonWrapper {
+    gap: 6px;
+  }
+
+  .btnDelete {
+    margin-top: 2px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .todo {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .btnMarkAsComplete,
+  .btnDelete {
+    padding: 7px 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .todo {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .buttonWrapper {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .btnDelete {
+    margin-top: 0;
+  }
+
+  .btnMarkAsComplete,
+  .btnDelete {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .todo {
+    padding: 15px;
+  }
+
+  .isComplete,
+  .isNotComplete {
+    width: 70%;
+    font-size: 18px;
+  }
+
+  .buttonWrapper {
+    width: 25%;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .btnMarkAsComplete,
+  .btnDelete {
+    width: auto;
+    padding: 8px 15px;
+  }
+
+  .btnDelete {
+    margin-top: 0;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .todo {
+    padding: 15px 20px;
+    font-size: 19px;
+    margin-bottom: 12px;
+  }
+
+  .btnMarkAsComplete,
+  .btnDelete {
+    padding: 10px 16px;
+    font-size: 16px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .todo {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btnMarkAsComplete,
+  .btnDelete {
+    transition: none;
+  }
+}
+
+.btnMarkAsComplete:focus,
+.btnDelete:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .todo {
+    background: rgba(60, 70, 110, 0.95);
+  }
 }

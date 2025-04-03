@@ -1,9 +1,8 @@
 .signupform {
   position: fixed;
-  top: 100%;
+  top: 50%;
   left: 50%;
-
-  transform: translate(-50%, -0%);
+  transform: translate(-50%, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +12,10 @@
   backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 90%;
+  max-width: 350px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .signupform input {
@@ -27,6 +28,7 @@
   color: white;
   outline: none;
   transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .signupform input::placeholder {
@@ -51,6 +53,7 @@
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   position: relative;
+  box-sizing: border-box;
 }
 
 .signupform button:hover {
@@ -74,7 +77,11 @@
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  white-space: nowrap;
+  max-width: 90%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-top: 10px;
 }
 
 .spinner {
@@ -102,4 +109,46 @@
   background: rgba(255, 255, 255, 0.1);
   cursor: not-allowed;
   pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .signupform {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .signupform input,
+  .signupform button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .popup {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .signupform {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .signupform {
+    max-width: 400px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .signupform {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }

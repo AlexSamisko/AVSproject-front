@@ -1,9 +1,9 @@
 .loginform {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 999;
-  transform: translate(-50%, -0%);
+  transform: translate(-50%, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +13,10 @@
   backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 90%;
+  max-width: 350px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .loginform input {
@@ -27,6 +29,7 @@
   color: white;
   outline: none;
   transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .loginform input::placeholder {
@@ -50,6 +53,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
 .loginform button:hover {
@@ -72,6 +76,7 @@
   transition: color 0.3s ease-in-out;
   margin-bottom: 10px;
   padding: 0;
+  width: auto;
 }
 
 .loginform .forgotPassword:hover,
@@ -103,6 +108,12 @@
   }
 }
 
+.loginform button.loading {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .signupform button.loading {
   background: rgba(255, 255, 255, 0.1);
   cursor: not-allowed;
@@ -120,5 +131,55 @@
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  white-space: nowrap;
+  max-width: 90%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: normal;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .loginform {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .loginform .forgotPassword {
+    font-size: 12px;
+  }
+
+  .popup {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .loginform {
+    padding: 12px;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loginform {
+    max-width: 400px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .loginform {
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
 }

@@ -1,9 +1,9 @@
 .loginform {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 999;
-  transform: translate(-50%, -0%);
+  transform: translate(-50%, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,10 +11,13 @@
   padding: 20px;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
   max-width: 300px;
   margin: auto;
+  overflow: hidden;
 }
 
 .loginform input {
@@ -50,6 +53,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .loginform button:hover {
@@ -80,6 +84,7 @@
   text-decoration: underline;
   background: none;
   box-shadow: none;
+  transform: none;
 }
 
 .spinner {
@@ -103,7 +108,8 @@
   }
 }
 
-.signupform button.loading {
+.signupform button.loading,
+.loginform button.loading {
   background: rgba(255, 255, 255, 0.1);
   cursor: not-allowed;
   pointer-events: none;
@@ -121,4 +127,144 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   white-space: nowrap;
+  max-width: 250px;
+  text-align: center;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .loginform {
+    padding: 15px;
+    gap: 10px;
+    width: 95%;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .loginform .forgotPassword {
+    font-size: 12px;
+  }
+
+  .popup {
+    padding: 10px 15px;
+    font-size: 14px;
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .loginform {
+    padding: 18px;
+    width: 90%;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 11px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .loginform {
+    max-width: 350px;
+    padding: 25px;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 13px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .loginform {
+    max-width: 400px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 14px;
+    font-size: 17px;
+  }
+
+  .loginform .forgotPassword {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .loginform {
+    top: 0;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .loginform input,
+  .loginform button {
+    padding: 8px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .loginform {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .loginform {
+    background: linear-gradient(135deg, #162b57, #1e3c72);
+  }
+
+  .popup {
+    background-color: #454545;
+    color: #f0f0f0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loginform button:hover,
+  .loginform button:active {
+    transform: none;
+  }
+
+  .spinner {
+    animation: none;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .loginform {
+    background: #1a365d;
+    border: 2px solid white;
+  }
+
+  .loginform input,
+  .loginform button {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid white;
+  }
+
+  .loginform input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .popup {
+    border: 1px solid black;
+  }
 }
