@@ -15,7 +15,7 @@ function TodoForm({ addTodo }) {
     <form onSubmit={onSubmitHandler} className={styles.todoForm}>
       <input
         className={styles.input}
-        placeholder="Text next objective"
+        placeholder="Text next service request"
         value={objective}
         onChange={(e) => {
           SetObjective(e.target.value);
@@ -33,7 +33,7 @@ function TodoForm({ addTodo }) {
         {!isHovered && (
           <p className={styles.popup}>The field must not be empty.</p>
         )}
-        Add objective
+        Add service request
       </button>
     </form>
   );
