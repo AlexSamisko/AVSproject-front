@@ -3,17 +3,17 @@ import styles from './MyInfo.module.css';
 function MyInfo() {
   return (
     <div className={styles.info}>
-      <h2>
-        There's a pervasive belief in the Netherlands that this unconventional
-        meal helps lift the national mood.
-      </h2>
+      <h2>Another Successful Job Completed!</h2>
       <p>
-        "I think I'm an addict, basically," says Marije Nicklin, who grew up on
-        the Dutch island of Terschelling. The Dutch expat, who has been based in
-        West Yorkshire, UK, since 2002, is obsessed with hagelslag, carefully
-        rationing the packets her parents post to her and the bag-loads she
-        brings back on the ferry. "I've got quite a lot in storage," she says.
-        "I do start to twitch when I see the end is coming."
+        Fred had been struggling with a broken fence and a power outage in his
+        backyard for weeks. The unstable fence was swaying dangerously in the
+        wind, and the lack of electricity made his evenings quite inconvenient.
+        Our team stepped in to handle the repairs. First, we reinforced and
+        rebuilt the fence, ensuring it was sturdy and secure. Then, our
+        electricians restored the power supply, identifying and fixing the issue
+        quickly. Now, Fred can enjoy his backyard again without worries. If you
+        need carpentry, locksmith, or electrical services, feel free to leave a
+        comment!
       </p>
     </div>
   );
