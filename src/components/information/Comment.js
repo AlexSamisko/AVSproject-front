@@ -1,6 +1,8 @@
 import styles from './Comment.module.css';
 import CommentForm from './CommentForm';
 import { useAuth } from '../login/LoginLogic/AuthContext';
+import { MdDeleteOutline } from 'react-icons/md';
+import { FaRegEdit } from 'react-icons/fa';
 
 function Comment({
   comment,
@@ -23,7 +25,7 @@ function Comment({
                 deleteComment(comment);
               }}
             >
-              Delete
+              <MdDeleteOutline className={styles.icon} />
             </button>
           )}
           {user && user.user_id === comment.user_id && (
@@ -39,7 +41,7 @@ function Comment({
                 );
               }}
             >
-              Redact
+              <FaRegEdit className={styles.icon} />
             </button>
           )}
         </div>
