@@ -123,10 +123,10 @@
     flex-basis: 70%;
   }
 
-  .btn {
+  /* .btn {
     width: auto;
     flex-basis: 25%;
-  }
+  } */
 }
 
 @media screen and (min-width: 1200px) {

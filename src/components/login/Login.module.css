@@ -31,6 +31,10 @@ button {
   box-sizing: border-box;
 }
 
+button.logout {
+  margin: 0 auto;
+}
+
 button:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);

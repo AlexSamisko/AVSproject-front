@@ -24,7 +24,7 @@ function Login() {
 
   if (user) {
     return (
-      <button type="button" onClick={logOutHandler}>
+      <button type="button" className={styles.logout} onClick={logOutHandler}>
         LogOut
       </button>
     );

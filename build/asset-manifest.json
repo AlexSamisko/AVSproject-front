@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AVSproject-front/static/css/main.59ebb8df.css",
-    "main.js": "/AVSproject-front/static/js/main.869f9b6e.js",
+    "main.css": "/AVSproject-front/static/css/main.eae1f6c0.css",
+    "main.js": "/AVSproject-front/static/js/main.23052d53.js",
     "static/js/453.2c3b2756.chunk.js": "/AVSproject-front/static/js/453.2c3b2756.chunk.js",
     "index.html": "/AVSproject-front/index.html",
-    "main.59ebb8df.css.map": "/AVSproject-front/static/css/main.59ebb8df.css.map",
-    "main.869f9b6e.js.map": "/AVSproject-front/static/js/main.869f9b6e.js.map",
+    "main.eae1f6c0.css.map": "/AVSproject-front/static/css/main.eae1f6c0.css.map",
+    "main.23052d53.js.map": "/AVSproject-front/static/js/main.23052d53.js.map",
     "453.2c3b2756.chunk.js.map": "/AVSproject-front/static/js/453.2c3b2756.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59ebb8df.css",
-    "static/js/main.869f9b6e.js"
+    "static/css/main.eae1f6c0.css",
+    "static/js/main.23052d53.js"
   ]
 }
