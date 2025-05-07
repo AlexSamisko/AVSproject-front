@@ -20,54 +20,52 @@
 
 ### Primary
 
-* `--primary-0`: ![#4f6db1](https://via.placeholder.com/20/4f6db1/000000?text=+)
-* `--primary-1`: ![#6580c0](https://via.placeholder.com/20/6580c0/000000?text=+)
-* `--primary-2`: ![#3d5982](https://via.placeholder.com/20/3d5982/000000?text=+)
-* `--primary-3`: ![#e4eaf7](https://via.placeholder.com/20/e4eaf7/000000?text=+)
-* `--primary-4`: ![#c2d1eb](https://via.placeholder.com/20/c2d1eb/000000?text=+)
+* `--primary-0`: <span style="background-color: #4f6db1; color: white; padding: 2px 6px; border-radius: 4px;">#4f6db1</span>
+* `--primary-1`: <span style="background-color: #6580c0; color: white; padding: 2px 6px; border-radius: 4px;">#6580c0</span>
+* `--primary-2`: <span style="background-color: #3d5982; color: white; padding: 2px 6px; border-radius: 4px;">#3d5982</span>
+* `--primary-3`: <span style="background-color: #e4eaf7; color: black; padding: 2px 6px; border-radius: 4px;">#e4eaf7</span>
+* `--primary-4`: <span style="background-color: #c2d1eb; color: black; padding: 2px 6px; border-radius: 4px;">#c2d1eb</span>
 
 ### Secondary
 
-* `--secondary-0`: ![#d0d9e6](https://via.placeholder.com/20/d0d9e6/000000?text=+)
-* `--secondary-1`: ![#8f9eb7](https://via.placeholder.com/20/8f9eb7/000000?text=+)
+* `--secondary-0`: <span style="background-color: #d0d9e6; color: black; padding: 2px 6px; border-radius: 4px;">#d0d9e6</span>
+* `--secondary-1`: <span style="background-color: #8f9eb7; color: white; padding: 2px 6px; border-radius: 4px;">#8f9eb7</span>
 
 ### Success
 
-* `--success-0`: ![#4e9a51](https://via.placeholder.com/20/4e9a51/000000?text=+)
-* `--success-1`: ![#e9f4ea](https://via.placeholder.com/20/e9f4ea/000000?text=+)
-* `--success-2`: ![#68b36b](https://via.placeholder.com/20/68b36b/000000?text=+)
+* `--success-0`: <span style="background-color: #4e9a51; color: white; padding: 2px 6px; border-radius: 4px;">#4e9a51</span>
+* `--success-1`: <span style="background-color: #e9f4ea; color: black; padding: 2px 6px; border-radius: 4px;">#e9f4ea</span>
+* `--success-2`: <span style="background-color: #68b36b; color: white; padding: 2px 6px; border-radius: 4px;">#68b36b</span>
 
 ### Warning
 
-* `--warning-0`: ![#d8a740](https://via.placeholder.com/20/d8a740/000000?text=+)
-* `--warning-1`: ![#fff5e1](https://via.placeholder.com/20/fff5e1/000000?text=+)
-* `--warning-2`: ![#e8c06a](https://via.placeholder.com/20/e8c06a/000000?text=+)
+* `--warning-0`: <span style="background-color: #d8a740; color: black; padding: 2px 6px; border-radius: 4px;">#d8a740</span>
+* `--warning-1`: <span style="background-color: #fff5e1; color: black; padding: 2px 6px; border-radius: 4px;">#fff5e1</span>
+* `--warning-2`: <span style="background-color: #e8c06a; color: black; padding: 2px 6px; border-radius: 4px;">#e8c06a</span>
 
 ### Danger
 
-* `--danger-0`: ![#d66560](https://via.placeholder.com/20/d66560/000000?text=+)
-* `--danger-1`: ![#fae9e8](https://via.placeholder.com/20/fae9e8/000000?text=+)
-* `--danger-2`: ![#e4847f](https://via.placeholder.com/20/e4847f/000000?text=+)
+* `--danger-0`: <span style="background-color: #d66560; color: white; padding: 2px 6px; border-radius: 4px;">#d66560</span>
+* `--danger-1`: <span style="background-color: #fae9e8; color: black; padding: 2px 6px; border-radius: 4px;">#fae9e8</span>
+* `--danger-2`: <span style="background-color: #e4847f; color: white; padding: 2px 6px; border-radius: 4px;">#e4847f</span>
 
 ### Info
 
-* `--info-0`: ![#539bb7](https://via.placeholder.com/20/539bb7/000000?text=+)
-* `--info-1`: ![#7bb2c8](https://via.placeholder.com/20/7bb2c8/000000?text=+)
+* `--info-0`: <span style="background-color: #539bb7; color: white; padding: 2px 6px; border-radius: 4px;">#539bb7</span>
+* `--info-1`: <span style="background-color: #7bb2c8; color: white; padding: 2px 6px; border-radius: 4px;">#7bb2c8</span>
 
 ### Dark
 
-* `--dark-0`: ![#1e1e1e](https://via.placeholder.com/20/1e1e1e/000000?text=+)
-* `--dark-1`: ![#2c2c2c](https://via.placeholder.com/20/2c2c2c/000000?text=+)
+* `--dark-0`: <span style="background-color: #1e1e1e; color: white; padding: 2px 6px; border-radius: 4px;">#1e1e1e</span>
+* `--dark-1`: <span style="background-color: #2c2c2c; color: white; padding: 2px 6px; border-radius: 4px;">#2c2c2c</span>
 
 ### Gray
 
-* `--gray-0`: ![#9fa6b2](https://via.placeholder.com/20/9fa6b2/000000?text=+)
-* `--gray-1`: ![#4b5563](https://via.placeholder.com/20/4b5563/000000?text=+)
-* `--gray-2`: ![#6b7280](https://via.placeholder.com/20/6b7280/000000?text=+)
+* `--gray-0`: <span style="background-color: #9fa6b2; color: black; padding: 2px 6px; border-radius: 4px;">#9fa6b2</span>
+* `--gray-1`: <span style="background-color: #4b5563; color: white; padding: 2px 6px; border-radius: 4px;">#4b5563</span>
+* `--gray-2`: <span style="background-color: #6b7280; color: white; padding: 2px 6px; border-radius: 4px;">#6b7280</span>
 
 ### White
 
-* `--white-0`: ![#f9fafb](https://via.placeholder.com/20/f9fafb/000000?text=+)
-* `--white-1`: ![#f1f3f5](https://via.placeholder.com/20/f1f3f5/000000?text=+)
-
-Эта палитра цветов ориентирована на комфортное использование и минимизацию утомляемости глаз при длительной работе с системой.
+* `--white-0`: <span style="background-color: #f9fafb; color: black; padding: 2px 6px; border-radius: 4px;">#f9fafb</span>
+* `--white-1`: <span style="background-color: #f1f3f5; color: black; padding: 2px 6px; border-radius: 4px;">#f1f3f5</span>
